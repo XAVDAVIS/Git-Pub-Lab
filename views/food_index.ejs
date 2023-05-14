@@ -4,27 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to gitPub</title>
+    <title>Welcome to gitPub!</title>
     <style type="text/css">
         body {
-            color: blanchedalmond;
-            background-color: steelblue;
+            display: flex;
+            flex-direction: column;
             align-items: center;
+            color: blanchedalmond;
+             background-color: orange;
+             text-transform: capitalize;
+            }
+            h1 {
+                font-size: 60px;
+            }
+        h2 {
+            color:blue;
         }
         img {
-            max-width: 300px;
+            max-width: 400px;
         }
-    </style>
+        ul {
+            list-style: none;
+        }
+        li:before { 
+            color:brown;
+            
+            content: "\27bd \0020"; 
+            margin-left: -20px; 
+            margin-right: 10px; 
+        }
+     </style>
 </head>
 <body>
-    <h1>Eat The Food</h1>
+    <h1>LETS EAT THE FOODS!</h1>
     <ul>
-        <% for ( let i = 0; i <allFood.length; i++){%>
-        <li>
-            <a href="/food/<%= i %>"><%=allFood[i].name%></a>
-        </li>
-        <% } %>
+        <% for (let i = 0; i < allFood.length; i++){%>
+            <li>
+                <a href="/food/<%= i %>"><%= allFood[i].name%></a>
+            </li>
+            <% } %>
     </ul>
-    <h5><a href="/drinks">See List of Drinks</a></h5>
+    <h5><a href="/drinks">Check out List of Drinks</a></h5>
 </body>
 </html>

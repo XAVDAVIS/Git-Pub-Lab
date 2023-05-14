@@ -36,4 +36,4 @@ const food = [
     },
   ]
 
-  module.exports = foods 
+  module.exports = food
